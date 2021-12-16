@@ -8,6 +8,7 @@ import CustomButton from '../CustomButton'
 import Header from '../header/Header'
 import Model from './Model'
 import { motion } from 'framer-motion'
+import { Loader } from '@react-three/drei'
 
 const headingVariants = {
   hidden: { opacity: 0, y: -30 },
@@ -27,7 +28,14 @@ export default function Hero({ animationEnd }) {
     <Box sx={{ backgroundColor: '#0A192F' }} id='home'>
       {animationEnd && <Header />}
       <Container maxWidth='lg'>
-        <Box sx={{ height: 500, mb: -5 }}>
+        <Box
+          sx={{
+            height: 500,
+            mb: -5,
+          }}
+        >
+          <Loader />
+
           <Canvas orthographic camera={{ zoom: 80, position: [0, 4, 4] }}>
             <ambientLight intensity={0.4} />
             <directionalLight position={[2.5, 8, 5]} intensity={1.5} />
