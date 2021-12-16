@@ -18,7 +18,7 @@ export default function Resume() {
             textDecoration: 'underline',
           }}
         >
-          Skills & Resume
+          Skills &amp; Resume
         </Typography>
         <Box sx={{ height: { xs: 350, sm: 500 } }}>
           <Sphere />
