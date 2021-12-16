@@ -1,14 +1,10 @@
-import { Suspense } from 'react'
 import Link from 'next/link'
 import { Container, Typography } from '@mui/material'
 import { Box } from '@mui/system'
-import { Canvas } from '@react-three/fiber'
-import { OrbitControls } from '@react-three/drei'
 import CustomButton from '../CustomButton'
 import Header from '../header/Header'
-import Model from './Model'
 import { motion } from 'framer-motion'
-import { Loader } from '@react-three/drei'
+import Sphere from './Sphere'
 
 const headingVariants = {
   hidden: { opacity: 0, y: -30 },
@@ -28,31 +24,14 @@ export default function Hero({ animationEnd }) {
     <Box sx={{ backgroundColor: '#0A192F' }} id='home'>
       {animationEnd && <Header />}
       <Container maxWidth='lg'>
-        <Box
-          sx={{
-            height: 500,
-            mb: -5,
-          }}
-        >
-          <Loader />
-
-          <Canvas orthographic camera={{ zoom: 80, position: [0, 4, 4] }}>
-            <ambientLight intensity={0.4} />
-            <directionalLight position={[2.5, 8, 5]} intensity={1.5} />
-            <pointLight
-              position={[-10, 0, -20]}
-              color='lightblue'
-              intensity={2.5}
-            />
-            <pointLight position={[0, -10, 0]} intensity={1.5} />
-            <Suspense fallback={null}>
-              <Model />
-              <OrbitControls enableZoom={false} />
-            </Suspense>
-          </Canvas>
+        <Box sx={{ mt: -4, height: { xs: 350, sm: 500 } }}>
+          <Sphere />
         </Box>
+
         {animationEnd && (
-          <Box sx={{ textAlign: 'center', zIndex: '10' }}>
+          <Box
+            sx={{ textAlign: 'center', my: { xs: 10, sm: 0 }, zIndex: '10' }}
+          >
             <motion.div
               initial='hidden'
               animate='visible'

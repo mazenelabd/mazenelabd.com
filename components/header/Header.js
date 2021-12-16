@@ -6,7 +6,7 @@ import MenuIcon from '@mui/icons-material/Menu'
 import Image from 'next/image'
 import SideNav from './SideNav'
 import { motion } from 'framer-motion'
-const pages = ['home', 'projects', 'resume', 'contact']
+const pages = ['home', 'projects', 'contact']
 
 export default function Header() {
   const [sideNav, setSideNav] = useState(false)
@@ -118,6 +118,28 @@ export default function Header() {
                 </Link>
               </motion.div>
             ))}
+            <a
+              href='/Mazen-Elabd.pdf'
+              alt='Full Resume'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <Button
+                sx={{
+                  my: 2,
+                  display: 'block',
+                  color: 'rgba(255,255,255,0.8)',
+                  '&:hover': {
+                    color: 'rgba(255,255,255,0.98)',
+                  },
+                  '&:active': {
+                    color: 'rgba(255,255,255,1)',
+                  },
+                }}
+              >
+                resume
+              </Button>
+            </a>
           </Box>
         </Toolbar>
       </Container>

@@ -11,12 +11,12 @@ export default function Home() {
   const [animationEnd, setAnimationEnd] = useState(false)
 
   return (
-    <Layout>
+    <>
       {!animationEnd && (
         <div
           style={{
             position: 'fixed',
-            height: '100vh',
+            height: '105vh',
             width: '100vw',
             backgroundColor: '#0A192F',
             color: '#CCD6F6',
@@ -33,11 +33,17 @@ export default function Home() {
           />
         </div>
       )}
-      <Hero animationEnd={animationEnd} />
-      <Projects />
-      <Resume />
-      <Contact />
-      <Footer />
-    </Layout>
+      <Layout>
+        <Hero animationEnd={animationEnd} />
+        {animationEnd && (
+          <>
+            <Projects />
+            <Resume />
+            <Contact />
+            <Footer />
+          </>
+        )}
+      </Layout>
+    </>
   )
 }

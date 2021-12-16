@@ -1,6 +1,6 @@
 import { Box } from '@mui/system'
 import { Container, Typography } from '@mui/material'
-import Sphere from './Sphere'
+import Sphere from '../hero/Sphere'
 import CustomButton from '../CustomButton'
 
 export default function Resume() {
@@ -18,11 +18,8 @@ export default function Resume() {
             textDecoration: 'underline',
           }}
         >
-          Skills &amp; Resume
+          Resume
         </Typography>
-        <Box sx={{ height: { xs: 350, sm: 500 } }}>
-          <Sphere />
-        </Box>
         <Box sx={{ textAlign: 'center', pb: 10 }}>
           <a
             href='/Mazen-Elabd.pdf'
