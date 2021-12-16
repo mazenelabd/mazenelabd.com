@@ -65,7 +65,7 @@ export default function Hero({ animationEnd }) {
                     letterSpacing: '1px',
                   }}
                 >
-                  I'm Mazen Elabd
+                  I&#39;m Mazen Elabd
                 </Typography>
               </motion.div>
               <motion.div variants={headingVariants}>
