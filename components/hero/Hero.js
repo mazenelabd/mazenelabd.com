@@ -24,7 +24,7 @@ export default function Hero({ animationEnd }) {
     <Box sx={{ backgroundColor: '#0A192F' }} id='home'>
       {animationEnd && <Header />}
       <Container maxWidth='lg'>
-        <Box sx={{ mt: -4, height: { xs: 350, sm: 500 } }}>
+        <Box sx={{ mt: { xs: 0, sm: -4 }, height: { xs: 350, sm: 500 } }}>
           <Sphere />
         </Box>
 

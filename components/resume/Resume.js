@@ -1,6 +1,5 @@
 import { Box } from '@mui/system'
 import { Container, Typography } from '@mui/material'
-import Sphere from '../hero/Sphere'
 import CustomButton from '../CustomButton'
 
 export default function Resume() {
