@@ -69,7 +69,7 @@ export default function Contact() {
             textDecoration: 'underline',
           }}
         >
-          Let's Talk!
+          Let&#39;s Talk!
         </Typography>
         <Container maxWidth='md'>
           <form onSubmit={handleSubmit}>
