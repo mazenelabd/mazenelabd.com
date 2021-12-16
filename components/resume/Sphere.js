@@ -37,8 +37,9 @@ function Word({ children, ...props }) {
       onPointerOut={out}
       {...props}
       {...fontProps}
-      children={children}
-    />
+    >
+      {children}
+    </Text>
   )
 }
 
@@ -59,7 +60,9 @@ function Cloud({ count = 4, radius = 20 }) {
     return temp
   }, [count, radius])
   return words.map(([pos, word], index) => (
-    <Word key={index} position={pos} children={skills[index]} />
+    <Word key={index} position={pos}>
+      {skills[index]}{' '}
+    </Word>
   ))
 }
 
