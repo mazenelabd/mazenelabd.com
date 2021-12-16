@@ -1,15 +1,44 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { useGLTF, useAnimations } from '@react-three/drei'
 import { useFrame } from '@react-three/fiber'
+import { useSpring } from '@react-spring/core'
+import { a } from '@react-spring/three'
 
 export default function Model({ ...props }) {
   const group = useRef()
-  useFrame(() => (group.current.rotation.y += 0.005))
+  const [active, setActive] = useState(0)
+  const [hovered, setHovered] = useState(false)
+
+  const over = (e) => (e.stopPropagation(), setHovered(true))
+  const out = () => setHovered(false)
+
+  useEffect(() => {
+    if (hovered) document.body.style.cursor = 'pointer'
+    return () => (document.body.style.cursor = 'auto')
+  }, [hovered])
+
+  useFrame(() => (group.current.rotation.y += 0.01))
 
   const { nodes, materials, animations } = useGLTF('/scene.gltf')
   const { actions } = useAnimations(animations, group)
+
+  const { spring } = useSpring({
+    spring: active,
+    config: { mass: 4, tension: 400, friction: 70, precision: 0.00001 },
+  })
+
+  const rotation = spring.to([0, 1], [0, Math.PI * 4])
   return (
-    <group ref={group} {...props} dispose={null}>
+    <a.group
+      ref={group}
+      {...props}
+      onPointerOver={over}
+      onPointerOut={out}
+      dispose={null}
+      scale={1.2}
+      rotation-y={rotation}
+      onClick={() => setActive(Number(!active))}
+    >
       <group rotation={[-Math.PI / 2, 0, 0]}>
         <group rotation={[Math.PI / 2, 0, 0]}>
           <group position={[-0.72, 1.01, 0.66]} rotation={[Math.PI / 2, 0, 0]}>
@@ -101,7 +130,7 @@ export default function Model({ ...props }) {
           </group>
         </group>
       </group>
-    </group>
+    </a.group>
   )
 }
 
