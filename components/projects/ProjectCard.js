@@ -49,7 +49,7 @@ export default function ProjectCard({ project, reverse }) {
               },
             }}
           >
-            <a target='_blank' href={project.website}>
+            <a target='_blank' rel='noopener noreferrer' href={project.website}>
               <Image
                 src={project.image}
                 alt={project.title}
@@ -102,6 +102,7 @@ export default function ProjectCard({ project, reverse }) {
               <MUILink
                 variant='h5'
                 target='_blank'
+                rel='noopener noreferrer'
                 href={project.website}
                 sx={{
                   mx: 1.5,
@@ -116,6 +117,7 @@ export default function ProjectCard({ project, reverse }) {
               <MUILink
                 variant='h5'
                 target='_blank'
+                rel='noopener noreferrer'
                 href={project.github}
                 sx={{
                   mx: 1.5,

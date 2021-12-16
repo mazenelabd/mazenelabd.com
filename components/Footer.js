@@ -23,6 +23,7 @@ export default function Footer() {
           <MUILink
             variant='h5'
             target='_blank'
+            rel='noopener noreferrer'
             href={'https://github.com/mazenelabd'}
             sx={{
               color: 'rgba(255,255,255,0.7)',
