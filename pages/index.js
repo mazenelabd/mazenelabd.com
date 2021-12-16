@@ -34,14 +34,10 @@ export default function Home() {
         </div>
       )}
       <Hero animationEnd={animationEnd} />
-      {animationEnd && (
-        <>
-          <Projects />
-          <Resume />
-          <Contact />
-          <Footer />
-        </>
-      )}
+      <Projects />
+      <Resume />
+      <Contact />
+      <Footer />
     </Layout>
   )
 }
