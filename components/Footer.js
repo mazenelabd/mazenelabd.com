@@ -38,7 +38,7 @@ export default function Footer() {
             variant='h5'
             target='_blank'
             rel='noopener noreferrer'
-            href={'www.linkedin.com/in/mazenelabd'}
+            href={'https://www.linkedin.com/in/mazenelabd'}
             sx={{
               mx: 1,
               color: 'rgba(255,255,255,0.7)',
