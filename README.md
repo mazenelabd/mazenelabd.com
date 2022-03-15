@@ -8,4 +8,4 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Visit my website:
 
-Open [mazenelabd.com](mazenelabd.com) to see the deployed version.
+Open [https://www.mazenelabd.com/](https://www.mazenelabd.com/) to see the deployed version.
