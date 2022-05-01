@@ -24,8 +24,8 @@ export default function ProjectCard({ project, reverse }) {
     <motion.div
       initial='hidden'
       whileInView='visible'
-      viewport={{ once: true }}
-      transition={{ duration: 0.6 }}
+      viewport={{ once: false }}
+      transition={{ delay: 0.3, duration: 0.7, ease: [0.17, 0.67, 0.83, 0.67] }}
       variants={{
         hidden: { opacity: 0, x: -120 },
         visible: { opacity: 1, x: 0 },
