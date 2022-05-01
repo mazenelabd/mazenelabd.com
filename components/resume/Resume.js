@@ -1,6 +1,7 @@
 import { Box } from '@mui/system'
 import { Container, Typography } from '@mui/material'
 import CustomButton from '../CustomButton'
+import Hero from './hero/Hero'
 
 export default function Resume() {
   return (
@@ -19,14 +20,26 @@ export default function Resume() {
         >
           Resume
         </Typography>
+        <Hero />
         <Box sx={{ textAlign: 'center', pb: 10 }}>
+          <Typography
+            variant='h5'
+            sx={{
+              fontWeight: '700',
+            }}
+            color='#8892B0'
+            mt={0}
+            mb={1.5}
+          >
+            I&#39;m Currently Working for Beyond Apps Group
+          </Typography>
           <a
             href='/Mazen-Elabd.pdf'
             alt='Full Resume'
             target='_blank'
             rel='noopener noreferrer'
           >
-            <CustomButton text='Resume' />
+            <CustomButton text='My Full Resume' />
           </a>
         </Box>
       </Container>
