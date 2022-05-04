@@ -4,12 +4,10 @@ import { Box } from '@mui/system'
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
 import Model from './Model'
-import { Loader } from '@react-three/drei'
 
 export default function Hero() {
   return (
     <Box sx={{ backgroundColor: '#0A192F' }} id='home'>
-      <Loader />
       <Container maxWidth='lg'>
         <Box
           sx={{
