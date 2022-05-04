@@ -2,7 +2,7 @@ import { Suspense } from 'react'
 import { Container } from '@mui/material'
 import { Box } from '@mui/system'
 import { Canvas } from '@react-three/fiber'
-import { OrbitControls } from '@react-three/drei'
+import { Loader, OrbitControls } from '@react-three/drei'
 import Model from './Model'
 
 export default function Hero() {
@@ -29,6 +29,7 @@ export default function Hero() {
               <OrbitControls enableZoom={false} />
             </Suspense>
           </Canvas>
+          <Loader />
         </Box>
       </Container>
     </Box>
