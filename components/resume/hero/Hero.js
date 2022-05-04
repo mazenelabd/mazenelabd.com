@@ -12,7 +12,6 @@ export default function Hero() {
         <Box
           sx={{
             height: 500,
-            mb: -5,
           }}
         >
           <Canvas orthographic camera={{ zoom: 80, position: [0, 4, 4] }}>
@@ -29,7 +28,13 @@ export default function Hero() {
               <OrbitControls enableZoom={false} />
             </Suspense>
           </Canvas>
-          <Loader />
+          <Loader 
+            containerStyles={{
+              position: 'relative',
+              top: '-100%',
+              backgroundColor: 'transparent'
+            }} 
+            innerStyles={{position: 'relative', top: '-100%'}} />
         </Box>
       </Container>
     </Box>
