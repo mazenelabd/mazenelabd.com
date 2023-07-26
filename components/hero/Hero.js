@@ -65,7 +65,7 @@ export default function Hero({ animationEnd }) {
                   mt={1.5}
                   mb={2.5}
                 >
-                  Full Stack Web Developer
+                  Full Stack Engineer & Data Scientist
                 </Typography>
               </motion.div>
               <motion.div variants={headingVariants}>

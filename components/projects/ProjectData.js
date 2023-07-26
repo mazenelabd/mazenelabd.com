@@ -1,5 +1,11 @@
 export const PROJECTS = [
   {
+    title: 'HateGuard - Machine Learning Model within a Full Stack Website',
+    image: '/projects/6.png',
+    technologies: ['PyTorch', 'React', 'Next.js', 'Flask'],
+    github: 'https://github.com/mazenelabd/HateGuard',
+  },
+  {
     title: 'Real Estate Firm Website',
     image: '/projects/1.png',
     technologies: ['React', 'Next.js', 'Strapi', 'Cypress'],
@@ -18,7 +24,6 @@ export const PROJECTS = [
       'JWT',
       'Cypress',
     ],
-    website: 'https://productivity1.herokuapp.com/',
     github: 'https://github.com/mazenelabd/Productivity',
   },
   {
@@ -33,7 +38,6 @@ export const PROJECTS = [
       'JWT',
       'Cypress',
     ],
-    website: 'https://taylorfans.herokuapp.com',
     github: 'https://github.com/mazenelabd/eCommerce-MERN',
   },
   {

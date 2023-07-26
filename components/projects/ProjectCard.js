@@ -49,7 +49,11 @@ export default function ProjectCard({ project, reverse }) {
               },
             }}
           >
-            <a target='_blank' rel='noopener noreferrer' href={project.website}>
+            <a 
+              target='_blank' 
+              rel='noopener noreferrer' 
+              href={project.website ?? project.github}
+            >
               <Image
                 src={project.image}
                 alt={project.title}
@@ -99,21 +103,23 @@ export default function ProjectCard({ project, reverse }) {
               </Paper>
             ))}
             <Box>
-              <MUILink
-                variant='h5'
-                target='_blank'
-                rel='noopener noreferrer'
-                href={project.website}
-                sx={{
-                  mx: 1.5,
-                  color: 'rgba(255,255,255,0.8)',
-                  '&:hover': {
-                    color: 'rgba(255,255,255,0.98)',
-                  },
-                }}
-              >
-                <FaExternalLinkAlt />
-              </MUILink>
+              { project?.website && (
+                  <MUILink
+                    variant='h5'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    href={project.website}
+                    sx={{
+                      mx: 1.5,
+                      color: 'rgba(255,255,255,0.8)',
+                      '&:hover': {
+                        color: 'rgba(255,255,255,0.98)',
+                      },
+                    }}
+                  >
+                    <FaExternalLinkAlt />
+                  </MUILink>
+              )}
               <MUILink
                 variant='h5'
                 target='_blank'
