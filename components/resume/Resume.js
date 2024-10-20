@@ -31,7 +31,7 @@ export default function Resume() {
             mt={0}
             mb={1.5}
           >
-            I&#39;m Currently Working for Beyond Apps Group
+            I&#39;m Currently Working for mindtrace.ai
           </Typography>
           <a
             href='/Mazen-Elabd.pdf'
