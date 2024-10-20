@@ -28,7 +28,7 @@ export default function Contact() {
     } else {
       const res = await toast
         .promise(
-          fetch('/api/sendgrid', {
+          fetch('/api/sendEmail', {
             body: JSON.stringify({
               email: form.email,
               firstName: form.firstName,
@@ -40,14 +40,23 @@ export default function Contact() {
               'Content-Type': 'application/json',
             },
             method: 'POST',
-          }),
+          })
+            .then((response) => {
+              if (!response.ok) {
+                throw new Error('Network response was not ok');
+              }
+              return response.json();
+            }),
           {
             pending: 'Sending your message',
             success: 'Sent successfully',
             error: 'Something went wrong',
           }
         )
-        .then(setForm(initialState))
+        .then(() => setForm(initialState))
+        .catch((error) => {
+          console.error('Error:', error);
+        });
     }
   }
 
